@@ -1,0 +1,423 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .title {
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #101010;
+    border-radius: 10px;
+    min-height: 50px;
+    width: 300px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header .title span{
+    margin-left: 10px;
+    text-transform: capitalize;
+    color: goldenrod;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 24px;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+header .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+header .progress-truck {
+    width: 98%;
+    height: 5px;
+    background-color: #777;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+/* Change background color of the progress bar and make it fully rounded on hover */
+header .progress-truck:hover .progress-bar {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    border-radius: 0 10px 10px 0; /* Fully rounded corners on the right */
+}
+
+header .progress-truck:hover .progress-bar {
+    border-top-right-radius: 30px; /* Adjust the value as needed */
+    border-bottom-right-radius: 30px; /* Adjust the value as needed */
+}
+
+
+header .progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ff5722;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-bar {
+    border-top-right-radius: 10px; /* Adjust the value as needed */
+    border-bottom-right-radius: 10px; /* Adjust the value as needed */
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 120px 20px 20px; /* Adjusted padding to account for fixed header */
+    margin-top: 30px;
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 100vh; /* Set a maximum height */
+    overflow: hidden; /* Disable manual scrolling */
+    position: relative; /* Ensure it can be scrolled programmatically */
+}
+
+.Welcome-message{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    display: flex; /* Use flexbox to create two sides */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.friend {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    min-height: 60vh;
+    display: flex; /* Use flexbox to create two sides */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #fff; /* Change to white for visibility over black overlay */
+    position: relative; /* Make sure the friend container is the reference for ::before */
+    overflow: hidden; /* Prevents ::before from overflowing */
+    transition: transform 0.3s;
+}
+
+.friend::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 0; /* Place the overlay behind the content */
+}
+
+.friend-left,
+.friend-right {
+    position: relative; /* Ensure text and images stay above the overlay */
+    z-index: 1; /* Keep content above the overlay */
+}
+
+
+.intro-div {
+    position: relative;
+    background-image: url('logo.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Center the background image */
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white; /* Ensure text is visible over the overlay */
+    z-index: 1; /* Ensure the text appears on top of the ::before overlay */
+}
+
+.intro-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+.intro-div p {
+    font-size: 20px;
+    background-color: #ddd;
+    color: #101010;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.intro-div p:hover{
+    background-color: #101010;
+    color: #f0f0f0;
+}
+
+/* Left side (image) */
+.friend-left {
+    flex: 1;
+    width: 40%; /* Set max width for image */
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+.friend-left img {
+    width: 100%; /* Image takes up full width of left side */
+    max-height: 100%;
+    border-radius: 10px; /* Make image circular */
+    object-fit: cover; /* Ensure the image fits well */
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side (name and description) */
+.friend-right {
+    flex: 2; /* Right side takes up more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    
+    color: #f0f0f0;
+}
+
+.friend-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* You can adjust the color as needed */
+    background-color: transparent;
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.friend-description {
+    font-size: 16px;
+    color: #f0f0f0;
+    background-color: transparent;
+    padding-left: 5px;
+    height: 80%;
+    border-bottom: 1px solid #f0f0f0;
+    overflow-y: auto;
+    display: flex;
+   /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none; /* IE 10+ */
+   flex-direction:column;
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.friend-description::-webkit-scrollbar {
+   display: none;
+}
+
+.friend-description p {
+    text-align: center; /* Default alignment for small screens */
+    font-size: 24px;
+}
+
+.friend .friend-right .controls span.translating {
+    background-color: #007bff;
+    color: #f0f0f0;
+}
+
+
+.friend .friend-right .controls{
+    background-color: transparent;
+    width: 98%;
+    height: auto;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.friend .friend-right .controls span{
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #101010;
+}
+
+.friend .friend-right .controls span:hover{
+    background-color: #007bff;
+    color: #f0f0f0;
+}
+
+.friend .friend-right .controls span.translating {
+    background-color: #007bff;
+    color: #f0f0f0;
+}
+
+.friend .friend-right .controls span.muted {
+    background-color: #FF0000;
+    color: #f0f0f0;
+}
+
+/* Container for the notification */
+#notification-container {
+    position: fixed;
+    top: 100px; /* Initially hidden above the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    display: none;
+    z-index: 9999;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    width: 40%;
+}
+
+
+/****************************************************************************************************************************/
+
+/* Media Queries for Small Screens */
+@media (max-width: 800px) {
+    header .top {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header .title {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    header .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header .progress-truck {
+        width: 90%;
+        height: 5px;
+        background-color: #777;
+        position: relative;
+        cursor: pointer;
+        
+    }
+
+    .container {
+        padding: 100px 10px 10px; /* Adjust padding for smaller screens */
+        margin-top: 20px;
+        width: 92%;
+    }
+
+    .friend {
+        flex-direction: column;
+        min-height: 40vh;
+        width: 100%;
+    }
+
+    .Welcome-message {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .friend .controls span {
+        margin-top: 5px;
+    }
+    .friend-description {
+        font-size: 16px;
+        color: #f0f0f0;
+        background-color: transparent;
+        padding-left: 5px;
+        height: 60%;
+        border-bottom: 1px solid #f0f0f0;
+        overflow-y: auto;
+    
+        /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+    }
+    
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+    .friend-description::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .friend-description p {
+        text-align: left; /* Default alignment for small screens */
+        font-size: 16px;
+    }
+}
