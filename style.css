@@ -87,6 +87,8 @@ header .progress-truck {
     
 }
 
+
+
 /* Change background color of the progress bar and make it fully rounded on hover */
 header .progress-truck:hover .progress-bar {
     background-color: #0056b3; /* Darker shade for hover effect */
@@ -267,6 +269,18 @@ header .progress-bar {
     margin-top: 20px;
     text-align: center;
     border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.friend-name .time-indicator {
+    color: #daa520;
+    padding: 5px;
+    border-radius: 5px;
+    display: block; /* Hidden initially */
 }
 
 .friend-description {
@@ -414,7 +428,7 @@ header .progress-bar {
 }
 
 /* Button styles */
-#restart-audio {
+.overlay-content button {
     padding: 10px 20px; /* Button padding */
     font-size: 1.2rem; /* Button text size */
     color: white; /* Text color */
@@ -426,7 +440,7 @@ header .progress-bar {
 }
 
 /* Button hover effect */
-#restart-audio:hover {
+.overlay-content button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
@@ -437,7 +451,7 @@ header .progress-bar {
         font-size: 1.5rem; /* Smaller heading on small screens */
     }
 
-    #restart-audio {
+    .overlay-content button {
         font-size: 1rem; /* Smaller button text */
         padding: 8px 16px; /* Smaller button padding */
     }
@@ -525,4 +539,5 @@ header .progress-bar {
         text-align: left; /* Default alignment for small screens */
         font-size: 16px;
     }
+}
 }
