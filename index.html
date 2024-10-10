@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 scalable='no'">
+
+     <!-- Twitter Card data -->
+     <meta name="twitter:card" content="Alumini of Cottolengo">
+     <meta name="twitter:site" content="Cottolengo">
+     <meta name="twitter:title" content="Alumini of Cottolengo">
+     <meta name="twitter:description" content="Come può un momento durare per sempre - How does a moment last forever?">
+     <meta name="twitter:image" content="https://th.bing.com/th/id/OIP._-n37Bns_GWxRxs-2SDHfgHaH_?w=164&h=180&c=7&r=0&o=5&pid=1.7">
+     <meta name="twitter:image:alt" content="Saint Joseph Cottolengo">
+
     <title>Cottolengo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -20,8 +29,22 @@
             <h2>Deo Gratias</h2>
             <button id="restart-audio">Play Again / Riproduci di nuovo</button>
             <button id="close-audio-overlay"> No thanks / No, grazie </button>
+            <button id="question-tag">Can I ask a question / Posso fare una domanda</button>
         </div>
     </div>
+
+    <div class="question-overlay">
+        <div class="question-content">
+            <h2>How Does A Moment Last Forever ? (Come fa un momento a durare per sempre?)</h2>
+            <p>Can I tell you? (Posso dirti?)</p>
+    
+            <div class="controls-actions">
+                <button>Yes Please (Sì, per favore)</button>
+                <button>No thanks (No, grazie)</button>
+            </div>
+        </div>
+    </div>
+    
 
     <header>
         <div class="top">
@@ -30,7 +53,7 @@
             </div>
     
             <div class="title">
-                <h1>Alumni Of SJBCH</h1>
+                <h1>Alumni Of S.J.B.C.</h1>
                 <span>Piccola casa e Divina Providenzza</span>
             </div>
         </div>
@@ -41,6 +64,7 @@
         </div>
     </header>
     <main>
+
         <div class="container">
 
             <div class="Welcome-message">
@@ -910,7 +934,7 @@
             
             <div class="friend">
                 <div class="friend-left">
-                    <img src="logo.png" alt="Friend Image">
+                    <img src="brayo.png" alt="Friend Image">
                 </div>
                 <div class="friend-right">
                     <div class="friend-name">Brian Oduor <span class="time-indicator"></span> </div>
@@ -932,10 +956,28 @@
                         <span><i class="fas fa-globe"></i></span> <!-- Added translation icon -->
                     </div>
                 </div>
-            </div>        
-            
+            </div>  
+
         </div>
-        
+
+        <div class="container">
+            <div class="friends">
+                <div class="friends-left">
+                    <img src="logo.png" alt="Friend Image">
+                </div>
+                <div class="friends-right">
+                    <div class="friend-name">San Giuseppe Cottolengo <span class="time-indicator"></span> </div>
+                    <div class="friend-description">
+                       <h2>How Does A Moment Last Forever</h2>
+                       <p>Come Fa Un Momento A Durare Per Sempre</p>
+                    </div>
+                    <div class="controls-buttons">
+                        <button><i class="fas fa-play"></i></button>
+                        <button>Back (Retro)</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
     </main>
     <script src="main.js"></script>
 </body>
