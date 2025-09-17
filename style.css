@@ -674,7 +674,7 @@ main .container:nth-of-type(2) {
 
     header .progress-truck {
         width: 90%;
-        height: 5px;
+        height: 11px;
         background-color: #777;
         position: relative;
         cursor: pointer;
@@ -823,6 +823,7 @@ main .container:nth-of-type(2) {
         font-weight: bolder;
     }
 }
+
 
 
 
